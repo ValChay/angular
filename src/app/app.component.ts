@@ -1,23 +1,37 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Article} from './article';
-import * as https from 'https';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'i-shop';
-  article: Article;
-  img = 'https://lerayonfrais.fr/fr/19691-slct-han-avid-white-safari--2900100103039.html';
+  articles: Article[] = [];
+
 
   constructor() {
 
-    this.article = new Article();
-    this.article.title = 'Puma';
-    this.article.price = 150;
+    this.articles.push(new Article());
+    this.articles[0].title = 'Puma';
+    this.articles[0].price = 150;
+    this.articles[0].image = 'puma.jpg';
 
+    this.articles.push(new Article());
+    this.articles[1].title = 'Nike';
+    this.articles[1].price = 130;
+    this.articles[1].image = 'puma.jpg';
+
+    this.articles.push(new Article());
+    this.articles[2].title = 'Vans';
+    this.articles[2].price = 99;
+    this.articles[2].image = 'puma.jpg';
+
+  }
+
+  ngOnInit() {
   }
 }

@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}!
   </h1>
-  <img src= "{{img}}" alt="" width="100px" height="100px">
-  <p> Modele : {{ article.title}}</p>
-  <p> Prix : {{ article.price | currency:'EUR'}}</p>
-
-
+<app-article-detail *ngFor="let article of articles"[article]="article"></app-article-detail>
+  <div >
+<!--
+    <img src="assets/img/{{article.image}}">
+-->
+    <p> Modele : {{ article.title}}</p>
+    <p> Prix : {{ article.price | currency:'EUR'}}</p><br>
+  </div>
 </div>
 
