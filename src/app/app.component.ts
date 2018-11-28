@@ -7,10 +7,11 @@ import {Article} from './article';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   title = 'i-shop';
   articles: Article[] = [];
+  currentArticle: Article;
 
 
   constructor() {
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit {
     this.articles.push(new Article());
     this.articles[1].title = 'Nike';
     this.articles[1].price = 130;
-    this.articles[1].image = 'puma.jpg';
+    this.articles[1].image = 'airmaxvapor.jpeg';
 
     this.articles.push(new Article());
     this.articles[2].title = 'Vans';
@@ -32,6 +33,9 @@ export class AppComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  setCurrent(article: Article): void {
+    console.log('selection');
+    this.currentArticle = article;
+
   }
 }
