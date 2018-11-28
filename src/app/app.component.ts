@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Article} from './article';
 
 
@@ -31,10 +31,15 @@ export class AppComponent {
     this.articles[2].price = 99;
     this.articles[2].image = 'puma.jpg';
 
+    this.currentArticle = this.articles[0];
+  }
+  // ajouter un article courant passe un objet en argument
+  add(article: Article): void {
+    this.articles.push(article);
+    this.currentArticle = article;
   }
 
   setCurrent(article: Article): void {
-    console.log('selection');
     this.currentArticle = article;
 
   }

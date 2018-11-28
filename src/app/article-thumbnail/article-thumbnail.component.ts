@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Article} from '../article';
 
 @Component({
-  selector: 'app-article-detail',
+  selector: 'app-article-thumbnail',
   templateUrl: './article-thumbnail.component.html',
   styleUrls: ['./article-thumbnail.component.css']
 })

@@ -3,15 +3,21 @@
   <h1>
     {{ title }}!
   </h1>
-
-  <div class="chaussureParent">
-    <!--//on parcour notre tableau d'objet du parent
-    // qui va injecté dans propriété enfant-->
-    <app-thumbnail-detail *ngFor="let article of articles"
-                        [article]="article"
-                        (articleSelected)="setCurrent($event)"><!--event est une instruction statique pour récupérer l'evenemtn-->
-    </app-thumbnail-detail>
-
+<app-article-create (articleCreated)="add($event)"></app-article-create>
+  <div class="article-wrapper">
+    <nav>
+      <!--//on parcour notre tableau d'objet du parent
+      // qui va injecté dans propriété enfant-->
+      <app-article-thumbnail *ngFor="let article of articles"
+                             [article]="article"
+                             (articleSelected)="setCurrent($event)">
+        <!--event est une instruction statique pour récupérer l'evenemtn-->
+      </app-article-thumbnail>
+    </nav>
+    <div class="detail">
+      <app-article-detail [article]="currentArticle"></app-article-detail>
+      <!--  Mécanisme de property binding-->
+    </div>
   </div>
 </div>
 
