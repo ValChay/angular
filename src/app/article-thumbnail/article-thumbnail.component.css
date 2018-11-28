@@ -5,3 +5,8 @@ img {
   height: 200px;
 }
 
+article img {
+
+  border: solid 1px #c8c8c8;
+  margin: 20px;
+}
