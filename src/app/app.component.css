@@ -14,12 +14,13 @@ img {
   height: 250px;
 }
 
-.article-wrapper {
+nav {
 
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 
 }
-
 
 article {
 

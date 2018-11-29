@@ -10,3 +10,11 @@ article img {
   border: solid 1px #c8c8c8;
   margin: 20px;
 }
+
+p.selected {
+
+  border-left-color: white ;
+  background-color: red;
+  color: white;
+
+}

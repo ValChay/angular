@@ -1,0 +1,7 @@
+[
+  {"title":  "Puma", "price": 150, "image": "puma.jpg"},
+  {"title":  "Vans", "price": 100, "image": "vans.jpg"},
+  {"title":  "Addidas", "price": 120, "image": "stan.jpg"},
+  {"title":  "Nike", "price": 200, "image": "airmaxvapor.jpeg"},
+  {"title":  "Puma", "price": 160, "image": "puma.jpg"}
+]

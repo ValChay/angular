@@ -8,8 +8,9 @@ import {Article} from '../article';
 })
 export class ArticleThumbnailComponent implements OnInit {
 
-  @Input()
-  article: Article;
+  @Input() article: Article;
+  @Input() isActive: boolean;
+
 
   // décorateur output pour transmettre des données
   @Output()

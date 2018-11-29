@@ -2,6 +2,6 @@
   <div >
     <img src="assets/img/{{article.image}}">
   </div>
-  <p> Modele : {{ article.title}}</p>
+  <p [class.selected]="isActive"> Modele : {{ article.title}}</p>
   <p> Prix : {{ article.price | currency:'EUR'}}</p>
 </article>
