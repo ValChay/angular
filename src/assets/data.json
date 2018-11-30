@@ -1,7 +1,7 @@
 [
-  {"title":  "Puma", "price": 150, "image": "puma.jpg"},
-  {"title":  "Vans", "price": 100, "image": "vans.jpg"},
-  {"title":  "Addidas", "price": 120, "image": "stan.jpg"},
-  {"title":  "Nike", "price": 200, "image": "airmaxvapor.jpeg"},
-  {"title":  "Puma", "price": 160, "image": "puma.jpg"}
+  {"id":  1,"title":  "Puma", "price": 150, "image": "assets/img/puma.jpg"},
+  {"id":  2,"title":  "Vans", "price": 100, "image": "assets/img/vans.jpg"},
+  {"id":  3,"title":  "Addidas", "price": 120, "image": "assets/img/stan.jpg"},
+  {"id":  4,"title":  "Nike", "price": 200, "image": "assets/img/airmaxvapor.jpeg"},
+  {"id":  5,"title":  "Puma", "price": 160, "image": "assets/img/puma.jpg"}
 ]

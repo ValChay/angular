@@ -12,7 +12,7 @@ import {SERVEUR_URL_TOKEN} from './app.config';
 })
 export class AppComponent {
 
-  title = 'i-shop';
+  title = 'Bienvenue chez I-shop';
   articles: Article[];
   loger: LogerService;
   currentArticle: Article;

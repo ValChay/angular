@@ -1,11 +1,14 @@
 h1 {
 
-  background-color: #0009ff;
+
+  height: 20%;
+  color: #af6413;
 }
 
 ul {
 
   font-size: 10px;
+
 }
 
 img {
@@ -24,7 +27,7 @@ nav {
 
 article {
 
-  background-color: #0009ff;
+  background-color: #b3691e;
   padding: 150px;
 }
 

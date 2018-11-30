@@ -9,6 +9,9 @@ import {ArticleDetailComponent} from './article-detail/article-detail.component'
 import {LogerService} from './loger.service';
 import {configFactory, SERVEUR_URL, SERVEUR_URL_TOKEN} from './app.config';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router';
+import { ArticleIndexComponent } from './article-index/article-index.component';
+import { MenuComponent } from './menu/menu.component';
 
 const LOGGER_ALIAS = new InjectionToken('alias vers le loger');
 const SECONDE_CONF = new InjectionToken('deuxième config');
@@ -17,14 +20,23 @@ const SECONDE_CONF = new InjectionToken('deuxième config');
     AppComponent,
     ArticleThumbnailComponent,
     ArticleDetailComponent,
-    ArticleCreateComponent
+    ArticleCreateComponent,
+    ArticleIndexComponent,
+    MenuComponent
   ],
   // gestion des fonctions du framework dispo dans l'app
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // Chargement des configurations de routes, permet de navigué sur l'app changer le contenue daffichage
+    RouterModule.forRoot([
+      {path: 'article', component: ArticleIndexComponent },
+      {path: 'article/:id', component: ArticleDetailComponent },
+      {path: 'create', component: ArticleCreateComponent },
+      {path: '', redirectTo: 'article', pathMatch: 'full'},
+    ])
   ],
   providers: [
     LogerService,

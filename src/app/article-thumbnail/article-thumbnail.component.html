@@ -1,6 +1,7 @@
 <article (click)="select()">
   <div >
-    <img src="assets/img/{{article.image}}">
+    <!--<img src="assets/img/{{article.image}}">-->
+    <img [src]="article.image" alt="{{article.title}}">
   </div>
   <p [class.selected]="isActive"> Modele : {{ article.title}}</p>
   <p> Prix : {{ article.price | currency:'EUR'}}</p>
